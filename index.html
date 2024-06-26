@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Concorda - Resumo de Termos de Uso</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,61 +13,16 @@
       padding: 0;
       background-color: #f9f9f9;
     }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-    }
     h1, h2 {
       margin: 10px 0;
     }
-    .container {
+    .container-custom {
       max-width: 1200px;
       margin: 20px auto;
       padding: 0 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
     }
-    .card {
-      width: calc(50% - 20px);
+    .card-custom {
       margin-bottom: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-    .card-header {
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px;
-    }
-    .card-content {
-      padding: 20px;
-    }
-    .card-content form {
-      margin-top: 10px;
-    }
-    label, textarea, input[type="submit"] {
-      display: block;
-      margin-bottom: 10px;
-    }
-    textarea {
-      width: 100%;
-      resize: vertical;
-    }
-    input[type="submit"] {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    input[type="submit"]:hover {
-      background-color: #0056b3;
     }
     footer {
       text-align: center;
@@ -78,34 +34,42 @@
   </style>
 </head>
 <body>
-  <header>
+  <header class="bg-dark text-white text-center py-3">
     <h1>Concorda - Resumo de Termos de Uso</h1>
   </header>
   
-  <div class="container">
-    <div class="card">
-      <div class="card-header">
-        <h2>Termos de Empresas Famosas</h2>
+  <div class="container container-custom">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-custom">
+          <div class="card-header bg-primary text-white">
+            <h2 class="h5">Termos de Empresas Famosas</h2>
+          </div>
+          <div class="card-body">
+            <div class="d-grid gap-2">
+              <a href="termos-facebook.html" class="btn btn-primary btn-block">Facebook</a>
+              <a href="termos-google.html" class="btn btn-primary btn-block">Google</a>
+              <a href="termos-amazon.html" class="btn btn-primary btn-block">Amazon</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card-content">
-        <ul>
-          <li><a href="termos-facebook.html">Facebook</a></li>
-          <li><a href="termos-google.html">Google</a></li>
-          <li><a href="termos-amazon.html">Amazon</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="card">
-      <div class="card-header">
-        <h2>Resumir Termos</h2>
-      </div>
-      <div class="card-content">
-        <form action="resumo.php" method="POST">
-          <label for="termos">Insira os termos a serem resumidos:</label>
-          <textarea id="termos" name="termos" rows="10" cols="50"></textarea>
-          <input type="submit" value="Resumir">
-        </form>
+      
+      <div class="col-md-6">
+        <div class="card card-custom">
+          <div class="card-header bg-primary text-white">
+            <h2 class="h5">Resumir Termos</h2>
+          </div>
+          <div class="card-body">
+            <form action="resumo.php" method="POST">
+              <div class="form-group">
+                <label for="termos">Insira os termos a serem resumidos:</label>
+                <textarea id="termos" name="termos" class="form-control" rows="10"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Resumir</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -113,5 +77,9 @@
   <footer>
     <p>&copy; 2024 Concorda - Resumo de Termos de Uso</p>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
