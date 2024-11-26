@@ -1,88 +1,173 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Concorda - Resumo de Termos de Uso</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    header{
-      background-color: #007bff;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-    h1, h2 {
-      margin: 10px 0;
-    }
-    .container-custom {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    .card-custom {
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      margin-top: 20px;
-      padding: 10px 0;
-      background-color: #007bff;
-      color: #fff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concorda - Simplifique os Termos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #343a40, #6c63ff);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+        .hero-section p {
+            font-size: 1.25rem;
+            margin-top: 10px;
+        }
+        .feature-section {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+        .feature-card {
+            margin-bottom: 30px;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .feature-card h5 {
+            font-weight: 600;
+        }
+        .summary-container {
+            margin-top: 40px;
+        }
+        .terms-card {
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .terms-card h5 {
+            font-weight: 600;
+        }
+        .btn-primary {
+            background-color: #6c63ff;
+            border-color: #6c63ff;
+        }
+        .btn-primary:hover {
+            background-color: #5753cc;
+            border-color: #5753cc;
+        }
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-  <header class="text-white text-center py-3">
-    <h1>Concorda - Resumo de Termos de Uso</h1>
-  </header>
-  
-  <div class="container container-custom">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card card-custom">
-          <div class="card-header bg-primary text-white">
-            <h2 class="h5">Termos de Empresas Famosas</h2>
-          </div>
-          <div class="card-body">
-            <div class="d-grid gap-2">
-              <a href="termos-facebook.html" class="btn btn-primary btn-block">Facebook</a>
-              <a href="termos-google.html" class="btn btn-primary btn-block">Google</a>
-              <a href="termos-amazon.html" class="btn btn-primary btn-block">Amazon</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-6">
-        <div class="card card-custom">
-          <div class="card-header bg-primary text-white">
-            <h2 class="h5">Resumir Termos </h2>
-          </div>
-          <div class="card-body">
-            <form action="resumo.php" method="POST">
-              <div class="form-group">
-                <label for="termos">Insira os termos a serem resumidos:</label>
-                <textarea id="termos" name="termos" class="form-control" rows="10"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Resumir</button>
-            </form>
-          </div>
-        </div>
-      </div>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Bem-vindo ao Concorda</h1>
+        <p>Simplifique termos de uso com nossa tecnologia de ponta e veja tudo de forma clara.</p>
     </div>
-  </div>
-  
-  <footer>
-    <p>&copy; 2024 Concorda - Resumo de Termos de Uso</p>
-  </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Features Section -->
+    <div class="feature-section text-center">
+        <div class="container">
+            <h2 class="mb-4">Como Funciona</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="card-body">
+                            <h5>Envie Documentos</h5>
+                            <p>Carregue os termos de uso ou políticas de privacidade para serem simplificados em segundos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="card-body">
+                            <h5>IA Avançada</h5>
+                            <p>Usamos inteligência artificial para traduzir termos complexos em uma linguagem acessível.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="card-body">
+                            <h5>Termos Prontos</h5>
+                            <p>Consulte resumos já prontos de termos populares como WhatsApp, Facebook e Instagram.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Term Upload and Summary Section -->
+    <div class="container summary-container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="mb-4">Envie seus Termos de Uso</h3>
+                <form id="term-form">
+                    <div class="mb-3">
+                        <label for="fileInput" class="form-label">Upload de Documento</label>
+                        <input type="file" class="form-control" id="fileInput" accept=".txt,.pdf,.doc,.docx">
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary btn-lg" id="summarizeButton">Resumir Termos</button>
+                    </div>
+                </form>
+                <div class="mt-4">
+                    <h4>Resumo Gerado</h4>
+                    <textarea id="summaryOutput" class="form-control" rows="8" readonly></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="mb-4">Termos Mais Famosos Resumidos</h3>
+                <div class="card terms-card">
+                    <div class="card-body">
+                        <h5>WhatsApp</h5>
+                        <p>O WhatsApp coleta dados como número de telefone, mensagens criptografadas, e metadados.</p>
+                    </div>
+                </div>
+                <div class="card terms-card">
+                    <div class="card-body">
+                        <h5>Instagram</h5>
+                        <p>O Instagram utiliza seus dados para anúncios personalizados e armazena todo conteúdo compartilhado.</p>
+                    </div>
+                </div>
+                <div class="card terms-card">
+                    <div class="card-body">
+                        <h5>Facebook</h5>
+                        <p>O Facebook rastreia atividades dentro e fora da plataforma, compartilhando informações com empresas Meta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Concorda. Simplicidade e Transparência.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript to simulate summarization -->
+    <script>
+        document.getElementById('summarizeButton').addEventListener('click', function () {
+            const fileInput = document.getElementById('fileInput');
+            const summaryOutput = document.getElementById('summaryOutput');
+
+            if (!fileInput.files.length) {
+                alert('Por favor, envie um arquivo primeiro!');
+                return;
+            }
+
+            // Simulação de integração com ChatGPT
+            summaryOutput.value = "Resumo gerado: Este é um exemplo de como os termos enviados serão resumidos e exibidos aqui.";
+        });
+    </script>
 </body>
 </html>
